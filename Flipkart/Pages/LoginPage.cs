@@ -29,7 +29,7 @@ namespace Flipkart.Pages
         
         public void AccountLogin()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(4000);
             mail.SendKeys(email);
             passWord.SendKeys(password);
             loginButton.Click();

@@ -5,7 +5,7 @@ using System.Threading;
 namespace Flipkart.Pages
 {
     public class HomePage
-   {
+    {
 
         public IWebDriver driver;
         public HomePage(IWebDriver driver)
@@ -33,5 +33,5 @@ namespace Flipkart.Pages
             Thread.Sleep(7000);
         }
 
-   }
+    }
 }
