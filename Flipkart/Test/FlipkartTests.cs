@@ -20,9 +20,16 @@ namespace Flipkart.Test
         public void SearchProduct()
         {
             var product = new HomePage(driver);
-            product.SearchMobile();
-            string title = "Samsung Guru Music 2 - Buy Products Online at Best Price in India - All Categories | Flipkart.com";
-            Assert.AreEqual(driver.Title, title);
+            product.SearchMobile();           
+        }
+
+        [Test, Order(3)]
+        public void BuyProduct()
+        {
+            var product = new CartPage(driver);
+            product.AddtoCart();
+            string url = "https://www.flipkart.com/checkout/init?otracker=search";
+            Assert.AreEqual(driver.Url, url);
         }
     }
 }

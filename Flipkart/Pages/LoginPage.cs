@@ -33,7 +33,7 @@ namespace Flipkart.Pages
             mail.SendKeys(email);
             passWord.SendKeys(password);
             loginButton.Click();
-            Thread.Sleep(6000);
+            Thread.Sleep(5000);
         }        
     }
 }

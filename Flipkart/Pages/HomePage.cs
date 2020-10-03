@@ -28,9 +28,10 @@ namespace Flipkart.Pages
             SearchBox.Click();
             SearchBox.SendKeys("Samsung Guru Music 2");
             SearchButton.Click();
-            Thread.Sleep(10000);
+            Thread.Sleep(9000);
             samsungPhone.Click();
             Thread.Sleep(7000);
+            driver.SwitchTo().Window(driver.WindowHandles[1]);
         }
 
     }
