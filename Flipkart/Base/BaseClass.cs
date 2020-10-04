@@ -19,8 +19,16 @@ namespace Flipkart.Base
             driver.Url = "https://www.flipkart.com/";
         }
 
+        [TearDown]
+        public void CloseTest()
+        {
+            var filepath = $"{ TestContext.CurrentContext.TestDirectory}\\{TestContext.CurrentContext.Test.MethodName}.jpg";
+            ((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filepath);
+            TestContext.AddTestAttachment(filepath, "Test Screenshots");
+        }
+
         [OneTimeTearDown]
-        public void Close()
+        public void CloseBrowser()
         {
             driver.Quit();
         }
