@@ -31,5 +31,14 @@ namespace Flipkart.Test
             string url = "https://www.flipkart.com/checkout/init?otracker=search";
             Assert.AreEqual(driver.Url, url);
         }
+
+        [Test, Order(4)]
+        public void AccountLogout()
+        {
+            var logout = new LogoutPage(driver);
+            logout.FlipkartLogout();
+            string title = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+            Assert.AreEqual(driver.Title, title);
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Flipkart.Pages
             buyNow.Click();
             Thread.Sleep(10000);
             continueBtn.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
         }
     }
 }
