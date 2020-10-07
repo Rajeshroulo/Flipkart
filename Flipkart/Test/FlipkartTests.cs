@@ -7,7 +7,7 @@ namespace Flipkart.Test
 {
     public class FlipkartTests : BaseClass
     {
-        [Test,Order(1)]
+        [Test, Order(1)]
         public void FlipkartLogin()
         {
             var login = new LoginPage(driver);
@@ -39,6 +39,15 @@ namespace Flipkart.Test
             logout.FlipkartLogout();
             string title = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
             Assert.AreEqual(driver.Title, title);
+        }
+
+        [Test, Order(5)]
+        public void FlipkartAccountLogin()
+        {
+            var login = new Login(driver);
+            login.AccountLogin();
+            string url = "https://www.flipkart.com/";
+            Assert.AreEqual(driver.Url, url);
         }
     }
 }
